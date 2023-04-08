@@ -10,27 +10,35 @@ package org.utl.dsm.mafter.model;
  */
 public class Finanza {
    int idFinanza;
+   Alumno alumno;
+   String costeTitulo ;
 float cantidadCoste;
-String costeTitulo ;
-String costeDes ,fechaHoraCoste ;
-
+String fechaHoraCoste ; 
+  String costeDes ;
+int estatus;
     public Finanza() {
     }
 
-    public Finanza(int idFinanza, float cantidadCoste, String costeTitulo, String costeDes, String fechaHoraCoste) {
+    public Finanza(int idFinanza, Alumno alumno, String costeTitulo, float cantidadCoste, String fechaHoraCoste, String costeDes, int eestatus) {
         this.idFinanza = idFinanza;
-        this.cantidadCoste = cantidadCoste;
+        this.alumno = alumno;
         this.costeTitulo = costeTitulo;
-        this.costeDes = costeDes;
+        this.cantidadCoste = cantidadCoste;
         this.fechaHoraCoste = fechaHoraCoste;
+        this.costeDes = costeDes;
+        this.estatus= estatus;
     }
 
-    public Finanza(float cantidadCoste, String costeTitulo, String costeDes, String fechaHoraCoste) {
-        this.cantidadCoste = cantidadCoste;
+    public Finanza(Alumno alumno,  String costeTitulo, float cantidadCoste, String fechaHoraCoste, String costeDes, int estatus) {
+        this.alumno = alumno;
         this.costeTitulo = costeTitulo;
-        this.costeDes = costeDes;
+        this.cantidadCoste = cantidadCoste;
         this.fechaHoraCoste = fechaHoraCoste;
+        this.costeDes = costeDes;
+        this.estatus= estatus;
     }
+
+    
 
     public int getIdFinanza() {
         return idFinanza;
@@ -38,6 +46,16 @@ String costeDes ,fechaHoraCoste ;
 
     public void setIdFinanza(int idFinanza) {
         this.idFinanza = idFinanza;
+    }
+
+    
+
+    public Alumno getAlumno() {
+        return alumno;
+    }
+
+    public void setAlumno(Alumno alumno) {
+        this.alumno = alumno;
     }
 
     public float getCantidadCoste() {
@@ -72,11 +90,22 @@ String costeDes ,fechaHoraCoste ;
         this.fechaHoraCoste = fechaHoraCoste;
     }
 
-    @Override
-    public String toString() {
-        return "Finanza{" + "idFinanza=" + idFinanza + ", cantidadCoste=" + cantidadCoste + ", costeTitulo=" + costeTitulo + ", costeDes=" + costeDes + ", fechaHoraCoste=" + fechaHoraCoste + '}';
+    public int getEstatus() {
+        return estatus;
     }
 
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
+    }
+
+    
+    
+    @Override
+    public String toString() {
+        return "Finanza{" + "idFinanza=" + idFinanza +  ", alumno=" + alumno + ", cantidadCoste=" + cantidadCoste + 
+                ", costeTitulo=" + costeTitulo + ", costeDes=" + costeDes +
+                ", fechaHoraCoste=" + fechaHoraCoste + ", estatus"+ estatus+ '}';
+    }
 
     
 }

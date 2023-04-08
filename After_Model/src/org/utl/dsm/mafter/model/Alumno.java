@@ -9,14 +9,17 @@ package org.utl.dsm.mafter.model;
  * @author Lenovo
  */
 public class Alumno {
-    int idAlumno;
-    String nombre, apePaterno, apeMaterno, genero, nivelEstudio, ganancias, telMovil, email; 
+    int idAlumno,estatus;
+    Usuario usuario;
+    String nombre, apePaterno, apeMaterno, genero, nivelEstudio, telMovil, email; 
+    float ganancias;
 
     public Alumno() {
     }
 
-    public Alumno(int idAlumno, String nombre, String apePaterno, String apeMaterno, String genero, String nivelEstudio, String ganancias, String telMovil, String email) {
-        this.idAlumno = idAlumno;
+    public Alumno(int estatus, Usuario usuario, String nombre, String apePaterno, String apeMaterno, String genero, String nivelEstudio, float ganancias, String telMovil, String email) {
+        this.estatus = estatus;
+        this.usuario = usuario;
         this.nombre = nombre;
         this.apePaterno = apePaterno;
         this.apeMaterno = apeMaterno;
@@ -27,7 +30,10 @@ public class Alumno {
         this.email = email;
     }
 
-    public Alumno(String nombre, String apePaterno, String apeMaterno, String genero, String nivelEstudio, String ganancias, String telMovil, String email) {
+    public Alumno(int idAlumno, int estatus, Usuario usuario, String nombre, String apePaterno, String apeMaterno, String genero, String nivelEstudio, float ganancias, String telMovil, String email) {
+        this.idAlumno = idAlumno;
+        this.estatus = estatus;
+        this.usuario = usuario;
         this.nombre = nombre;
         this.apePaterno = apePaterno;
         this.apeMaterno = apeMaterno;
@@ -44,6 +50,22 @@ public class Alumno {
 
     public void setIdAlumno(int idAlumno) {
         this.idAlumno = idAlumno;
+    }
+
+    public int getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public String getNombre() {
@@ -86,11 +108,11 @@ public class Alumno {
         this.nivelEstudio = nivelEstudio;
     }
 
-    public String getGanancias() {
+    public float getGanancias() {
         return ganancias;
     }
 
-    public void setGanancias(String ganancias) {
+    public void setGanancias(float ganancias) {
         this.ganancias = ganancias;
     }
 
@@ -109,12 +131,12 @@ public class Alumno {
     public void setEmail(String email) {
         this.email = email;
     }
+    
 
     @Override
     public String toString() {
-        return "Alumno{" + "idAlumno=" + idAlumno + ", nombre=" + nombre + ", apePaterno=" + apePaterno + ", apeMaterno=" + apeMaterno + ", genero=" + genero + ", nivelEstudio=" + nivelEstudio + ", ganancias=" + ganancias + ", telMovil=" + telMovil + ", email=" + email + '}';
+        return "Alumno{" + "idAlumno=" + idAlumno + ", estatus=" + estatus + ", usuario=" + usuario.toString() + ", nombre=" + nombre + ", apePaterno=" + apePaterno + ", apeMaterno=" + apeMaterno + ", genero=" + genero + ", nivelEstudio=" + nivelEstudio + ", ganancias=" + ganancias + ", telMovil=" + telMovil + ", email=" + email + '}';
     }
-    
-    
+
     
 }

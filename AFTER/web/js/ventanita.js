@@ -1,9 +1,3 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
- */
-
-
 var contenedorVentanaModal = document.getElementById("contenedorVentanaModal");
 
 function abrirVentanaModal() {
@@ -91,3 +85,6 @@ const toggleButton = document.querySelector('.dark-light');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
+
+
+

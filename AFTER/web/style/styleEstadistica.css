@@ -1,0 +1,64 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22 mar. 2023, 03:00:04
+    Author     : Lenovo
+*/
+
+/*.card {
+ width: 190px;
+ height: 254px;
+ background: rgb(255, 255, 255);
+ border-radius: 0.4em;
+ box-shadow: 0.3em 0.3em 0.7em #00000015;
+ transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ border: rgb(250, 250, 250) 0.2em solid;
+}
+
+.card:hover {
+ border: #006fff 0.2em solid;
+}*/
+
+.card {
+ 
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.card:hover {
+ 
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  background-color: #dfdfdf;
+  transition: all .5s;
+}
+
+.secondAnimation {
+  --hoverContorno: #959595;
+}
+
+.secondAnimation:hover,
+.secondAnimation:focus {
+  -webkit-animation: cardAnimacion 1.4s;
+  animation: cardAnimacion 1.4s;
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+  border-radius: 20px;
+}
+
+@-webkit-keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+@keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+

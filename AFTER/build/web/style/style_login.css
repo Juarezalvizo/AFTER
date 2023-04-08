@@ -55,12 +55,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   color: rgb(0, 255, 200);
 }
 
-.form .btn {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 2.5em;
-}
+
 
 .button1 {
   padding: 0.5em;
@@ -157,3 +152,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background-repeat: no-repeat;
     background-size:cover;
 }
+#letras{
+  margin: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+

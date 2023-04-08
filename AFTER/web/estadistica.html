@@ -1,195 +1,121 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
-    <head>
-        <title>Estadistica</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style/stylePrint.css" rel="stylesheet" type="text/css"/>
+<head>
+    <title>Agenda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/stylePrint.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="style/bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" type="text/css" href="style/fontawesome-free-6.1.1-web/css/fontawesome.min.css">   
     <link rel="stylesheet" type="text/css" href="style/fontawesome-free-6.1.1-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style/stylePruebas.css" rel="stylesheet" type="text/css"/>
     <link href="style/stylePrint.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body class="imagen_fondo">
-        <div>
-            <div class="row" style="background-color: #09979d" >
-                <div class="col-12 text-center">
-                    <img class="logo" src="img/logotipo.JPG" width="150"><img class="imgTxtLogo" src="img/letrasLOgo.JPG" alt="letrasLogo">
+    <link href="style/StyleAgenda.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="imagen_fondo">
+    <div class="container-fluid"><div>
+        <link rel="icon" href="img/alvizo.png" type="image/png">
+        </div>
+       <div>
+           <div class="row" style="background-color: #09979d" >
 
-                </div>
-            </div>
-            <div class="container">
-  <div class="row">
-    <div class="col-lg-1">
-     <nav id="side-nav">
-            <div class="mi-div" id="mi-div-especifico">
-                <center>
-                    <h3 class="text-white font-weight-bold"><b><i>Usuario</i></b></h3></center>
-  <div class="d-flex flex-column align-items-center mt-2">
-    <img src="img/icono.png" alt="Imagen de perfil" class="rounded-circle" width="50">
-    <span class="text-white mt-2"><I><b>Nombre de usuario</b></i></span>
-  </div>
-                
-</div> 
-                      
-  <ul>
-    <li>
-      <a href="#">
-        <i class="fa fa-address-book"></i>
-        <span>Agenda</span>
-      </a>
-      <ul>
-        <li><a href="agenda.html">Agregar</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-address-card"></i>
-        <span>Avisos</span>
-      </a>
-      <ul>
-        <li><a href="avisos.html">Agregar</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-calendar"></i>
-        <span>Calendario</span>
-      </a>
-      <ul>
-        <li><a href="calendario.html">Visitar</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-money-bill"></i>
-        <span>Finanzas</span>
-      </a>
-      <ul>
-        <li><a href="finanzas.html">Agregar</a></li>
-        <li><a href="estadistica.html">Estadistica</a></li>
-      </ul>
-    </li>
-  </ul>
-  <a id="toggle">
-    <i class="fa fa-chevron-circle-left"></i>
-  </a>
-</nav>
-      <!-- Aquí va el contenido del menú -->
-    </div>
-    <div class="col-lg-3">
+               <div class="col-12 text-center">
+
+                   <img class="logo" src="img/logotipo.JPG" width="120"><img class="imgTxtLogo" src="img/letrasLOgo.JPG" alt="letrasLogo">
+                   <div class="colors" >
+                       <a class="default" href="javascript:void(0)"></a>
+                       <a class="blue" href="javascript:void(0)"></a>
+                       <a class="green" href="javascript:void(0)"></a>
+                       <a class="red" href="javascript:void(0)"></a>
+                       <a class="white" href="javascript:void(0)"></a>
+                       <a class="black" href="javascript:void(0)"></a>
+                       <center><button class="button" class="navbar-toggle" id="toggle-menu">Menu</button></center>
+                   </div>
+               </div>
+           </div>
+         <div class="col-lg-1">
+			
+             
+			<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+				<div class="jquery-accordion-menu-header"> 
+                                    
+                                    <label><i class="fa fa-home-lg"></i> Menu</label>
+                                  </a></li>
+ </div>
+                            <ul>
+					<li class="active"><a href="datosUsuario.html"><i class="fa fa-user-alt"></i>  Usuario </a></li>
+					<li><a href="#"><i class="fa fa-modx"></i> Modulos </a>
+						<ul class="submenu">
+                                                    <li><a href="agenda.html"><i class="fa fa-address-book"></i>  Agenda </a></li>
+                                                        <li><a href="avisos.html"><i class="fa fa-address-card"></i>  Avisos </a></li>
+                                                        <li><a href="finanzas.html" ><i class="fa fa-money-bill"></i>  Finanzas </a>
+                                                            <ul class="submenu"> <li>
+                                                                    <a href="estadistica.html"><i class="fa fa-scale-balanced"></i> Estadisticas </a></ul></li>
+						</ul>
+					</li>
+                                        <li class="active"><a href="calendario.html"><i class="fa fa-calendar"></i>  Calendario </a></li>
+					<li><a href="informacion.html"><i class="fa fa-book-reader"></i> info </a></li>
+					<li><a href="#"><i class="fa fa-long-arrow-alt-down"></i> Salir </a></li>
+				</ul>
+                            <div class="jquery-accordion-menu-footer"><a href="principal.html"><i class="fa fa-home-user"></i> Regresar</a></div>
+			</div>
+		</div>
+      
+    
+    <div class="col-lg-2">
       
       <!-- Aquí van las opciones -->
-    </div>
-    <div class="col-lg-5">
+    </div> 
+    <div class="col-lg-9">
       <div class="row" style="padding-top: 8px; padding-bottom: 16px;">
-                                  
-                                    <input id="txtCodigoUnico"  hidden> 
-                                    <input id="idMateria" type="hidden">
-                                
-                                
-                                <div class="col-4">                            
-                                    <div class="form">
-                                        <label for="txtnombre"><b>Nombre: </b></label>
-                                        <input id="txtnombre"  class="input" placeholder="Nombre" required="" type="text" >
-                                       <span class="input-border"></span>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-4">                            
-                                    <div class="form">
-                                        <label for="txtacompra"><b>Precio Compra:</b></label>
-                                        <input id="txtacompra"  class="input" placeholder="PrecioCompra" required="" type="text" >
-                                       <span class="input-border"></span>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form">
-                                             <label for="txtapeventa"><b>Precio Venta:</b></label>
-                                        <input id="txtapeventa"  class="input" placeholder="Precio Venta" required="" type="text" >
-                                       <span class="input-border"></span>          
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                            <div><div class="mt-5">
-                                    <center>
-                                        <button onclick="cm.insertarMa();"  class="btn btn-primary"><span class="shadow"></span>
-                                            <span class="front text"><i class="fas fa-save me-2"></i>Guardar</button>
-
-                                        <button onclick="cm.actualizar();" class="btn btn-secondary"><span class="shadow"></span>
-                                            <span class="front text"><i class="fas fa-bitbucket me-2"></i>Modificar</button>
-
-                                            <button onclick="cm.limpiarM();" class="btn btn-info"><span class="shadow"></span>
-                                            <span class="front text"><i class="fas fa-close  me-2"></i>Limpiar</button>
-                                        <br>
-                                            <br>
-                                                </center>
-                                    <!-- <button class="btn btn-danger"><i class="fas fa-trash me-2"></i>Eliminar</button> -->
-                                </div></div>
-                        </div>
+            <div class="col-3">                            
+                    <button class="button">Semanal
+            </button>
                     </div>
-                    <center>
-                        <div>
-                            <div class="col-5 mt-3" id="divListadoMateriales">
-                                <div class="card">
-                                    <div class="card-header head-main">
-                                        <h2 class="head-main">Listado de Materiales</h2>
-
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="row table-responsive m-2">
-                                            
-                                            <div><div class="mt-2">
-                                   
-                                        <button class="btn btn-success" onclick="cm.catalogoMaterial();"><span class="shadow"></span>
-<span class="front text"><i class=" fa fa-spinner fa-spin  fa-fw me-2"></i>Activos</button>
-                                            <button class="btn btn-danger" onclick="cm.catalogoInactivosMateriales();"><span class="shadow"></span>
-<span class="front text"><i class=" fa fa-spinner fa-spin  fa-fw me-2"></i>Inactivos</button>
-                                            </div></div>
-                                            <table class="table table-bordered table-hover text-center">
-                                                <thead class="tabla">
-                                                    <tr>
-                                                        <th>Nombre</th>
-                                                        <th>Precio compra</th>
-                                                        <th>Precio venta</th>
-                                                        <th>Datos</th>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="tbMaterial">
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           </div>
-                                            </center>
-</div>
-      <!-- Aquí va el formulario -->
+               
+                <div class="col-3">                            
+                    <button class="button"> Mensual
+            </button>
+                    </div>
+                
+                <div class="col-3">
+                   <button class="button"> Anual
+            </button>
+                </div>
+          <div><br><br></div>
+            <div class="firstAnimation">
+    <div class="secondAnimation">
+        <div class="card">
+            <center>  <h1>Estadistica</h1></center>
+        </div>
     </div>
-  </div>
 </div>
         </div>
-            
+        </div>
 
-    <script src="js/ventanita.js" type="text/javascript"></script>
-    <script  src="style/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script  src="style/fontawesome-free-6.1.1-web/js/all.min.js"></script>
-    <script  src="style/sweetalert2/sweetalert2.all.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/sweetAlert.js"></script>
-    <script src="js/guardarvariable.js"></script>
+
+    </div>
+</div>
+
+</div>
+   <script src="js/ventanita.js" type="text/javascript"></script>
+        <script  src="style/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script  src="style/fontawesome-free-6.1.1-web/js/all.min.js"></script>
+        <script  src="style/sweetalert2/sweetalert2.all.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/sweetAlert.js"></script>
+        <script src="js/guardarvariable.js"></script>
+        <link href="style/myStyle.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+        <script src="js/pruebas.js" type="text/javascript"></script>
     <link href="style/myStyle.css" rel="stylesheet" type="text/css"/>
+    <link href="style/styleEstadistica.css" rel="stylesheet" type="text/css"/>
     </body>
 </html>

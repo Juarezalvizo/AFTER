@@ -10,31 +10,36 @@ package org.utl.dsm.mafter.model;
  */
 public class Agenda {
 
-    int idAgenda;
+    int idAgenda,estatus;
     String materia, 
             actiTitulo ,
             actiDes ,
             fechaHoraReg ,
             fechaHoraVenci;
-
+    Usuario usuario;
+    
     public Agenda() {
     }
 
-    public Agenda(int idAgenda, String materia, String actiTitulo, String actiDes, String fechaHoraReg, String fechaHoraVenci) {
-        this.idAgenda = idAgenda;
+    public Agenda(int estatus, String materia, String actiTitulo, String actiDes, String fechaHoraReg, String fechaHoraVenci, Usuario usuario) {
+        this.estatus = estatus;
         this.materia = materia;
         this.actiTitulo = actiTitulo;
         this.actiDes = actiDes;
         this.fechaHoraReg = fechaHoraReg;
         this.fechaHoraVenci = fechaHoraVenci;
+        this.usuario = usuario;
     }
 
-    public Agenda(String materia, String actiTitulo, String actiDes, String fechaHoraReg, String fechaHoraVenci) {
+    public Agenda(int idAgenda, int estatus, String materia, String actiTitulo, String actiDes, String fechaHoraReg, String fechaHoraVenci, Usuario usuario) {
+        this.idAgenda = idAgenda;
+        this.estatus = estatus;
         this.materia = materia;
         this.actiTitulo = actiTitulo;
         this.actiDes = actiDes;
         this.fechaHoraReg = fechaHoraReg;
         this.fechaHoraVenci = fechaHoraVenci;
+        this.usuario = usuario;
     }
 
     public int getIdAgenda() {
@@ -43,6 +48,14 @@ public class Agenda {
 
     public void setIdAgenda(int idAgenda) {
         this.idAgenda = idAgenda;
+    }
+
+    public int getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
     }
 
     public String getMateria() {
@@ -85,11 +98,16 @@ public class Agenda {
         this.fechaHoraVenci = fechaHoraVenci;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
-        return "Agenda{" + "idAgenda=" + idAgenda + ", materia=" + materia + ", actiTitulo=" + actiTitulo + ", actiDes=" + actiDes + ", fechaHoraReg=" + fechaHoraReg + ", fechaHoraVenci=" + fechaHoraVenci + '}';
+        return "Agenda{" + "idAgenda=" + idAgenda + ", estatus=" + estatus + ", materia=" + materia + ", actiTitulo=" + actiTitulo + ", actiDes=" + actiDes + ", fechaHoraReg=" + fechaHoraReg + ", fechaHoraVenci=" + fechaHoraVenci + ", usuario=" + usuario.toString() + '}';
     }
-    
-    
-    
 }

@@ -1,16 +1,17 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+Autor: Barrientos Flores Angel Francisco
+Empresa: E-DDIT
+Fecha:20/03/2023
+Descripcion: 
+  - open(): establece una conexión a una base de datos MySQL utilizando las credenciales 
+            de usuario y contraseña especificadas en la cadena de conexión. Devuelve un objeto de tipo Connection.
+  - close(): cierra la conexión a la base de datos establecida por el método open().
  */
 package org.utl.dsm.dafter.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author Lenovo
- */
 public class ConexionMySQL {
     Connection conn;
     

@@ -13,21 +13,24 @@ public class Calendario {
    Agenda agenda;
    Finanza finanza;
    Aviso aviso;
+   Usuario usuario;
    
     public Calendario() {
     }
 
-    public Calendario(Agenda agenda, Finanza finanza, Aviso aviso) {
+    public Calendario(Agenda agenda, Finanza finanza, Aviso aviso, Usuario usuario) {
         this.agenda = agenda;
         this.finanza = finanza;
         this.aviso = aviso;
+        this.usuario = usuario;
     }
 
-    public Calendario(int idCalendario, Agenda agenda, Finanza finanza, Aviso aviso) {
+    public Calendario(int idCalendario, Agenda agenda, Finanza finanza, Aviso aviso, Usuario usuario) {
         this.idCalendario = idCalendario;
         this.agenda = agenda;
         this.finanza = finanza;
         this.aviso = aviso;
+        this.usuario = usuario;
     }
 
     public int getIdCalendario() {
@@ -62,13 +65,16 @@ public class Calendario {
         this.aviso = aviso;
     }
 
-    @Override
-    public String toString() {
-        return "Calendario{" + "idCalendario=" + idCalendario + ", agenda=" + agenda + ", finanza=" + finanza + ", aviso=" + aviso + '}';
+    public Usuario getUsuario() {
+        return usuario;
     }
 
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
-    
-   
-   
+    @Override
+    public String toString() {
+        return "Calendario{" + "idCalendario=" + idCalendario + ", agenda=" + agenda.toString() + ", finanza=" + finanza.toString() + ", aviso=" + aviso.toString() + ", usuario=" + usuario.toString() + '}';
+    }    
 }

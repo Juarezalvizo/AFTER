@@ -10,29 +10,28 @@ package org.utl.dsm.mafter.model;
  */
 public class Aviso {
     
- int idAviso;
+ int idAviso,estatus;
+ Usuario usuario;
 String nombre, hora, dia;
-Agenda agenda;
-Finanza finanza;
-
-    public Aviso(int idAviso, String nombre, String hora, String dia, Agenda agenda, Finanza finanza) {
-        this.idAviso = idAviso;
-        this.nombre = nombre;
-        this.hora = hora;
-        this.dia = dia;
-        this.agenda = agenda;
-        this.finanza = finanza;
-    }
 
     public Aviso() {
     }
 
-    public Aviso(String nombre, String hora, String dia, Agenda agenda, Finanza finanza) {
+    public Aviso(int estatus, Usuario usuario, String nombre, String hora, String dia) {
+        this.estatus = estatus;
+        this.usuario = usuario;
         this.nombre = nombre;
         this.hora = hora;
         this.dia = dia;
-        this.agenda = agenda;
-        this.finanza = finanza;
+    }
+
+    public Aviso(int idAviso, int estatus, Usuario usuario, String nombre, String hora, String dia) {
+        this.idAviso = idAviso;
+        this.estatus = estatus;
+        this.usuario = usuario;
+        this.nombre = nombre;
+        this.hora = hora;
+        this.dia = dia;
     }
 
     public int getIdAviso() {
@@ -41,6 +40,22 @@ Finanza finanza;
 
     public void setIdAviso(int idAviso) {
         this.idAviso = idAviso;
+    }
+
+    public int getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public String getNombre() {
@@ -67,26 +82,10 @@ Finanza finanza;
         this.dia = dia;
     }
 
-    public Agenda getAgenda() {
-        return agenda;
-    }
-
-    public void setAgenda(Agenda agenda) {
-        this.agenda = agenda;
-    }
-
-    public Finanza getFinanza() {
-        return finanza;
-    }
-
-    public void setFinanza(Finanza finanza) {
-        this.finanza = finanza;
-    }
-
     @Override
     public String toString() {
-        return "Aviso{" + "idAviso=" + idAviso + ", nombre=" + nombre + ", hora=" + hora + ", dia=" + dia + ", agenda=" + agenda + ", finanza=" + finanza + '}';
+        return "Aviso{" + "idAviso=" + idAviso + ", estatus=" + estatus + ", usuario=" + usuario.toString() + ", nombre=" + nombre + ", hora=" + hora + ", dia=" + dia + '}';
     }
-    
 
+    
 }
